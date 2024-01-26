@@ -5,9 +5,6 @@ import NavMenuWeb from "./components/WebComponents/NavMenuWeb";
 import NavMenuMobile from "./components/MobileComponents/NavMenuMobile";
 import HomeMobile from "./components/MobileComponents/HomeMobile";
 
-
-
-
 function App() {
 
   const [nav, setNav] = useState(false);
