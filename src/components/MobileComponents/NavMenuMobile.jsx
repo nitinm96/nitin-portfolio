@@ -19,6 +19,7 @@ function NavMenuMobile() {
           <CloseRounded htmlColor='white' fontSize='medium' onClick={handleNav} className='z-20 cursor-pointer hover:opacity-55 m-4' />
           : 
           <MenuRoundedIcon htmlColor='black' fontSize='large' onClick={handleNav} className='z-20 cursor-pointer hover:opacity-55 m-4 ease-in duration-150' />
+          
         }
 
         <div className={

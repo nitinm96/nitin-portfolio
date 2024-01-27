@@ -7,10 +7,14 @@ function HomeWeb(){
     return(
         <>
             <div>
-                <img src={profilePic} width={250} className='rounded-full' />
+                <div>
+                    Hello, my name is                    
+                </div>
+                <div>
+                    NITIN <span>MINHAS</span>
+                </div>
             </div>
-        </>
-        
+        </>        
     )
 }
 export default HomeWeb
