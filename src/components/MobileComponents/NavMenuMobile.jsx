@@ -13,7 +13,10 @@ function NavMenuMobile() {
   return (
     <>
       <div className='flex flex-row justify-between items-center w-full'>
-        <div className="cursor-pointer text-3xl font-bold m-4">Nitin Minhas</div>
+
+        <div className='absolute h-24 top-0 left-0 w-full bg-white drop-shadow-md z-0'></div> 
+
+        <div className="cursor-pointer text-6xl font-bold m-4 text-[#0478FF] z-10">nm</div>
         {
           nav ?
           <CloseRounded htmlColor='white' fontSize='medium' onClick={handleNav} className='z-20 cursor-pointer hover:opacity-55 m-4' />

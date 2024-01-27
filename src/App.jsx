@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
-      setNav(window.innerWidth < 811);
+      setNav(window.innerWidth < 700);
     };
 
     // Initial setup
