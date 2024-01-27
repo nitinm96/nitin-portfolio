@@ -4,6 +4,7 @@ import HomeWeb from "./components/WebComponents/HomeWeb";
 import NavMenuWeb from "./components/WebComponents/NavMenuWeb";
 import NavMenuMobile from "./components/MobileComponents/NavMenuMobile";
 import HomeMobile from "./components/MobileComponents/HomeMobile";
+import AboutWeb from "./components/WebComponents/AboutWeb";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       <>
         <NavMenuWeb />
         <HomeWeb />
+        <AboutWeb />
       </>
    )}
     </>

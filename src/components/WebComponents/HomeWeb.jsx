@@ -1,24 +1,23 @@
 import React from "react";
 import { SiGithub, SiGithubcopilot, SiReact, SiWelcometothejungle } from '@icons-pack/react-simple-icons';
-import profilePic from '../../assets/profile-pic.jpeg'
+import profilePic from '../../assets/profile-pic.png'
 import Typewriter from 'typewriter-effect';
 
 function HomeWeb(){
-
     return(
         <>
-            <div className="flex items-center justify-center m-10">
-                <div className="flex justify-end pr-28 w-2/4">
-                    <img src={profilePic} width={450} className="rounded-full shadow-2xl" alt="" />
+            <div className="flex items-center justify-center h-screen bg-gray-100">
+                <div className="flex items-center justify-center m-8 w-2/4">
+                    <img src={profilePic} width={475} className="rounded-full shadow-2xl" alt="proile-pic.png"/>
                 </div>
-                <div className="w-2/4">
+                <div className="m-8 w-2/4">
                     <div className="text-4xl mb-4">
                         Hello, my name is               
                     </div>
                     <div className=" text-7xl mr-px ">
                         <div className="text-[#0478FF]">nitin
                             <span className="text-[#6EB0FE]"> minhas</span>.
-                        </div>                       
+                        </div>                                               
                     </div>
 
                     <div className="mt-10">
@@ -37,7 +36,7 @@ function HomeWeb(){
                                 }}
                             />
                         </span>
-                    </div>
+                    </div>                
                 </div>                  
             </div>
         </>        

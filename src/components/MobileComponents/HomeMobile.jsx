@@ -1,5 +1,5 @@
 import React from 'react'
-import profilePic from '../../assets/profile-pic.jpeg'
+import profilePic from '../../assets/profile-pic.png'
 import Typewriter from 'typewriter-effect';
 
 function HomeMobile() {
@@ -10,7 +10,7 @@ function HomeMobile() {
                 <div className="text-4xl mb-6">
                     Hello, my name is                    
                 </div>
-                <div className="text-7xl mr-px ">
+                <div className="text-7xl mr-px">
                     <div className="text-[#0478FF]">nitin
                         <span className="text-[#6EB0FE]"> minhas</span>.
                     </div>      
