@@ -49,4 +49,6 @@ function App() {
 }
 // For navigating to different pages: https://www.geeksforgeeks.org/how-to-redirect-to-another-page-in-reactjs/
 // Icons https://github.com/icons-pack/react-simple-icons
+// Icons Weather: https://openweathermap.org/weather-conditions#Icon-list
+// Weather API: https://openweathermap.org/weather-conditions
 export default App

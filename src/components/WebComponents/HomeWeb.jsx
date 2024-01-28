@@ -6,10 +6,11 @@ import Typewriter from 'typewriter-effect';
 function HomeWeb(){
     return(
         <>
-            <div className="flex items-center justify-center h-screen bg-gray-100">
+            <div className="flex items-center justify-center w-full h-screen bg-gray-100">
                 <div className="flex items-center justify-center m-8 w-2/4">
                     <img src={profilePic} width={475} className="rounded-full shadow-2xl" alt="proile-pic.png"/>
                 </div>
+
                 <div className="m-8 w-2/4">
                     <div className="text-4xl mb-4">
                         Hello, my name is               
@@ -30,7 +31,7 @@ function HomeWeb(){
                         <span className="text 2xl text-[#0478FF] bold pl-1">
                             <Typewriter
                                 options={{
-                                    strings: ['React.', 'Angular.','Javascript.','HTML.'],
+                                strings: ['React.','Javascript.','Designing.','HTML.','CSS.','UI/UX.'],
                                     autoStart: true,
                                     loop: true,
                                 }}

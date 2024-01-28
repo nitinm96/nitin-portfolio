@@ -1,89 +1,51 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import cloudy from '../assets/WeatherIcons/cloudy.svg'
-import sunny from '../assets/WeatherIcons/clear-day.svg'
 
 
 function WeatherDate() {
 
-        function getDate() {
-        const today = new Date();
-        const month = today.getMonth() + 1;
-        const year = today.getFullYear();
-        const date = today.getDate();
-
-        // switch(month) {
-        //     case 1: 
-        //         month = 'January';
-        //         break;
-        //     case 2: 
-        //         month = 'Feburary';
-        //         break;
-        //     case 3: 
-        //         month = 'March';
-        //         break;
-        //     case 4: 
-        //         month = 'April';
-        //         break;
-        //     case 5: 
-        //         month = 'May';
-        //         break;
-        //     case 6: 
-        //         month = 'June';
-        //         break;
-        //     case 7: 
-        //         month = 'July';
-        //         break;
-        //     case 8: 
-        //         month = 'August';
-        //         break;
-        //     case 9: 
-        //         month = 'September';
-        //         break;
-        //     case 10: 
-        //         month = 'October';
-        //         break;
-        //     case 11: 
-        //         month = 'November';
-        //         break;
-        //     case 12: 
-        //         month = 'December';     
-        //         break;                    
-        //}
-        return `${month} / ${date} / ${year}`;       
-    }
-
     const [weatherData, setWeatherData] = useState(null);
 
     // useEffect(() => {
-    //     axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=43.62&lon=-79.79&exclude=alerts&units=metric&appid=fd2a234042a5b011864b06e335b8673f`)
-    //     .then((response) => {
-    //         setWeatherData(response);
-    //         console.log(response);
-    //     })
-    //     .catch((error) => {
-    //         console.log(error);       
-    //     })
-    // }, [])
+    //     const fetchData = async () => {
+    //     try {
+    //         // Fetch geolocation data
+    //         const position = await new Promise((resolve, reject) => {
+    //         navigator.geolocation.getCurrentPosition(resolve, reject);
+    //         });
+
+    //         const roundedLatitude = Math.round(position.coords.latitude * 100) / 100;
+    //         const roundedLongitude = Math.round(position.coords.longitude * 100) / 100;
+
+    //         // Fetch weather data using the obtained latitude and longitude
+    //         const response = await axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${roundedLatitude}&lon=${roundedLongitude}&exclude=alerts&units=metric&appid=fd2a234042a5b011864b06e335b8673f`);
+            
+    //         setWeatherData(response.data);
+    //         console.log(response.data);
+    //     } catch (error) {
+    //         console.error('Error fetching data:', error);
+    //     }
+    //     };
+
+    //     fetchData();
+    // }, []);
 
   return (
     <div>
-        <div className="flex items-center justify-center text-xl rounded-full">            
-            <div className='mx-2'>                
-                {getDate()}
-            </div>
-            <div className='flex items-center justify-center mx-2'>
-                 <span className=''>
-                    <img src={sunny} alt="cloudy.svg" width={60} height={50} />
-                </span>
-                -1 <sup>°C</sup>               
-                {/* {Math.round(weatherData && weatherData.data.current.feels_like) }°C */}
-                
-            </div>                                
-            <div>
-                Sunny                
-                {/* {weatherData && weatherData.data.current.weather[0].main} */}
-            </div>
+        <div className="flex items-center justify-center w-full text-xl">                      
+            <div className='flex items-center justify-center'>
+                 
+                27 <sup>°C</sup>
+                <span className='m-1'>
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png" width={60} height={50} />        
+                    {/* <img src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`} width={60} height={50} alt='weather-icon' /> */}
+                </span>             
+                {/* {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup>  */}
+                <div>
+                    Thunderstorm                
+                    {/* {weatherData && weatherData.current.weather[0].main}                 */}
+                </div>
+            </div>                                    
         </div>        
              
     </div>
@@ -91,3 +53,4 @@ function WeatherDate() {
 }
 
 export default WeatherDate
+//snow,rain,drizzle,thunderstorm
