@@ -2,11 +2,12 @@ import React from 'react'
 import profilePic from '../../assets/profile-pic.png'
 import Typewriter from 'typewriter-effect';
 import WeatherDate from '../WeatherDate';
+import ParticleBackground from '../ParticleBackground';
 
 function HomeMobile() {
   return (
     <>
-        <div className="flex flex-col items-center justify-center w-full h-screen">
+        <div name = "Home" className="flex flex-col items-center justify-center w-full h-screen">
                 <div className="mt-16 text-2xl">
                     Hello, my name is           
                     <div className="text-5xl">
@@ -38,7 +39,10 @@ function HomeMobile() {
                             }}
                         />
                     </span>
-                </div>                        
+                </div> 
+                <div className="absolute -z-10">
+                    <ParticleBackground />
+                </div>                       
             </div>
 
     </>

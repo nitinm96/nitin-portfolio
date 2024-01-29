@@ -35,11 +35,12 @@ function App() {
     <>
       <NavMenuMobile />
       <HomeMobile />
+      <AboutWeb />
     </>
     ) : (
       <>
         <NavMenuWeb />
-        <HomeWeb />
+        <HomeWeb />       
         <AboutWeb />
       </>
    )}
