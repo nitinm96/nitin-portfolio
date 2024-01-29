@@ -1,6 +1,6 @@
 import React from 'react'
-import WeatherDate from '../WeatherDate'
 import { Link } from 'react-scroll';
+import WeatherWeb from './WeatherWeb';
 
 function NavMenu() {
     
@@ -44,9 +44,9 @@ function NavMenu() {
                     </li>
                 ))}
             </ul>
-            <span className="pr-7 text-black z-10">
-                    <WeatherDate />      
-            </span>    
+            <div className="pr-7 text-black z-10">
+                    <WeatherWeb />      
+            </div>    
         </div>    
         
     </>
