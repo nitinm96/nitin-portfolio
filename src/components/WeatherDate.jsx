@@ -41,7 +41,7 @@ function WeatherDate() {
 
   return (
     <div>
-        <div className="flex items-center justify-center w-full text-xl">                      
+        <div className="flex items-center justify-center w-full text-xl ">                      
             <div className='flex items-center justify-center'>
                  
                 27 <sup>°C</sup>

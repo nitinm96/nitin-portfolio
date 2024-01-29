@@ -35,7 +35,7 @@ function NavMenu() {
                     nm
                 </Link>                        
             </div>     
-            <ul className='flex flex-row items-center justify-center z-10 '>
+            <ul className='flex flex-row items-center justify-center z-10'>
                 {links.map(({id, link}) => (
                     <li key={id} className="font-bold m-12 cursor-pointer hover:opacity-55 hover:ease-in duration-150">
                         <Link to={link} smooth duration={500}>

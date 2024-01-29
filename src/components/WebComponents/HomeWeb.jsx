@@ -1,6 +1,7 @@
 import React from "react";
 import { SiGithub, SiGithubcopilot, SiReact, SiWelcometothejungle } from '@icons-pack/react-simple-icons';
 import profilePic from '../../assets/profile-pic.png'
+import bitmojiPic from '../../assets/me-bitmoji.png'
 import Typewriter from 'typewriter-effect';
 import ParticleBackground from '../ParticleBackground'
 
@@ -10,7 +11,7 @@ function HomeWeb(){
             
             <div name="Home" className="flex items-center justify-center w-full h-screen">             
                 <div className="flex items-center justify-center m-8 w-2/4">
-                    <img src={profilePic} width={475} className="rounded-full shadow-2xl" alt="proile-pic.png"/>
+                    <img src={bitmojiPic} width={475} className="rounded-full shadow-2xl bg-white" alt="proile-pic.png"/>
                 </div>
                 <div className="m-8 w-2/4">
                 
