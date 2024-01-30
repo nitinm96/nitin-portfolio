@@ -7,10 +7,7 @@ import ParticleBackground from '../ParticleBackground';
 function HomeMobile() {
   return (
     <>
-        <div name = "Home" className="flex flex-col items-center justify-center w-full h-screen mt-10">
-                <div className='absolute top-20 right-0 w-full mt-1'>
-                   <WeatherMobile />      
-                </div>
+        <div name = "Home" className="flex flex-col items-center justify-center w-full h-screen top-28">            
                 <div className="text-2xl">                   
                     Hello, my name is                                 
                     <div className="text-5xl">
@@ -23,7 +20,7 @@ function HomeMobile() {
                 <div className="m-6">
                     <img src={profilePic} width={250} className="rounded-full shadow-2xl" alt="proile-pic.png"/>
                 </div>                
-                <div className="flex items-center justify-center m-5">
+                <div className="flex items-center justify-center text-center m-5">
                     Ready to turn theory into practice, transform challenges into opportunities, 
                     and embark on a journey of continuous learning in the tech world.
                 </div>

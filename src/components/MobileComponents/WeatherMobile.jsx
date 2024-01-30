@@ -11,10 +11,10 @@ function WeatherMobile() {
     const apiKeyOpenWeather = "fd2a234042a5b011864b06e335b8673f"
     const apiKeyOpenCage = "4ed66cbef5ff4b679bd021334fcb3842"
     const locationInfo = locationData && locationData.components;
-    const locationString = locationInfo ? locationInfo.city ? `${locationInfo.city}, ${locationInfo["ISO_3166-1_alpha-3"]}` : `${locationInfo.state}, ${locationInfo["ISO_3166-1_alpha-3"]}` : '';
+    const locationString = locationInfo ? locationInfo.city ? `${locationInfo.city}, ${locationInfo.state_code}` : `${locationInfo.state}, ${locationInfo.state_code}` : '';
     const [allowLocation, setAllowLocation] = useState(true);
 
-    //     useEffect(() => {
+//         useEffect(() => {
 //         const fetchData = async () => {
 //         try {
 //         // Fetch geolocation data
@@ -25,10 +25,8 @@ function WeatherMobile() {
 //         const roundedLatitude = Math.round(position.coords.latitude * 100) / 100;
 //         const roundedLongitude = Math.round(position.coords.longitude * 100) / 100;
 //         // Fetch city name using OpenCage Geocoding API
-        
 //         const openCageResponse = await axios.get(`https://api.opencagedata.com/geocode/v1/json?q=${roundedLatitude}+${roundedLongitude}&key=${apiKeyOpenCage}`);
 //         setLocationData(openCageResponse.data.results[0]);
-
 //         // Fetch weather data using the obtained latitude and longitude
 //         const openWeatherResponse = await axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=${roundedLatitude}&lon=${roundedLongitude}&exclude=alerts&units=metric&appid=${apiKeyOpenWeather}`);
 //         setWeatherData(openWeatherResponse.data);
@@ -43,17 +41,17 @@ function WeatherMobile() {
 //   }, []);
 
   return (
-    <div className= {allowLocation ? "flex items-center justify-end w-full text-xl": 'collapse'}>                      
-            <div className='flex items-center justify-center'>
+        <div className= {allowLocation ? "flex flex-col items-end justify-end w-full": 'collapse'}>                      
+            <div className='flex items-center justify-end mr-4'>
                 <span className='m-1'>
-                    <img src="https://openweathermap.org/img/wn/04d@2x.png" width={60}/>        
+                    <img src="https://openweathermap.org/img/wn/04d@2x.png" width={50}/>        
                     {/* <img src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`} width={60} height={50} alt='weather-icon' /> */}
                 </span>                   
                 10 <sup>°C</sup>
-                {/* {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup>  */}                                                   
+                {/* {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup>                                                     */}
             </div>   
-            <div className='flex items-center justify-center text-sm w-36'>                                             
-                 | Brampton, ON
+            <div className='flex items-center justify-center w-36'>                                             
+                Brampton, ON
                 {/* {locationString}  */}
                 <LocationOnOutlined htmlColor='#0478FF' />                       
             </div>                                             
