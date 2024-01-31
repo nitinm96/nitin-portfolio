@@ -1,51 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './App.css'
-import HomeWeb from "./components/WebComponents/HomeWeb";
-import NavMenuWeb from "./components/WebComponents/NavMenuWeb";
-import NavMenuMobile from "./components/MobileComponents/NavMenuMobile";
-import HomeMobile from "./components/MobileComponents/HomeMobile";
-import AboutWeb from "./components/WebComponents/AboutWeb";
+import NavgationMenu from './components/NavigationMenu.jsx'
+import Home from './components/Home.jsx'
+import About from './components/About.jsx'
+
 
 function App() {
 
-  const [nav, setNav] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-      setNav(window.innerWidth < 700);
-    };
-
-    // Initial setup
-    handleResize();
-
-    // Event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <>
-      { nav ? (
-    <>
-      <NavMenuMobile />
-      <HomeMobile />
-      <AboutWeb />
+      <NavgationMenu />
+      <Home />       
+      <About />
     </>
-    ) : (
-      <>
-        <NavMenuWeb />
-        <HomeWeb />       
-        <AboutWeb />
-      </>
-   )}
-    </>
-
   )
 }
 // For navigating to different pages: https://www.geeksforgeeks.org/how-to-redirect-to-another-page-in-reactjs/
