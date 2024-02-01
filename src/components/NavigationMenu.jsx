@@ -36,21 +36,21 @@ function NavMenu() {
     <div className='sticky top-0 z-20'>
         {/* DESKTOP VIEW START */}
         <MediaQuery minWidth={700}>
-            <nav id="nav-container" className="flex items-center justify-between w-full z-20"> 
+            <nav id="nav-container" className="flex items-center justify-between z-20"> 
 
                 {/* nav bar rectangle backround */}
                 <div className='absolute h-24 top-0 left-0 w-full bg-white/80 backdrop-blur-md drop-shadow-md z-0'></div>
                 {/* nav bar rectangle backround */}
             
                 <div className=" flex items-center justify-center cursor-pointer text-6xl font-bold m-4 z-10 text-[#0478FF]">
-                    <Link to='Home' smooth duration={500}>
+                    <Link to='Home' activeClass='true' spy={true} offset={-96} smooth duration={500}>
                         nm
                     </Link>                        
                 </div>     
                 <ul className='flex flex-row items-center justify-center z-10'>
                     {links.map(({id, link}) => (
-                        <li key={id} className="font-bold m-8 cursor-pointer hover:opacity-55 hover:ease-in duration-150">
-                            <Link to={link} smooth duration={500}>
+                        <li key={id} className="hover:scale-110 hover:text-gray-400 transition-all duration-150 ease-out text-[#0478FF] font-bold m-8 cursor-pointer">
+                            <Link to={link} activeClass='true' spy={true} offset={-96} smooth duration={500} className=''>
                                 {link}
                             </Link>
                         </li>
@@ -83,7 +83,7 @@ function NavMenu() {
                     <ul className='flex flex-col items-center justify-center w-full h-screen text-2xl text-white'>    
                             {links.map(({id, link}) => (
                                 <li className="font-bold m-7">
-                                    <Link to={link} smooth duration={500} onClick={handleNav}>
+                                    <Link to={link} activeClass='true' spy={true} offset={-96} smooth duration={500} onClick={handleNav}>
                                         {link}
                                     </Link>
                                 </li>
@@ -91,7 +91,7 @@ function NavMenu() {
                     </ul>          
                 </div>
                 <div className="flex items-center justify-start w-full cursor-pointer text-6xl font-bold text-[#0478FF] z-10">
-                    <Link to="Home" smooth duration={500}>
+                    <Link to="Home" activeClass='true' spy={true} offset={-96} smooth duration={500}>
                     nm
                     </Link>
                 </div> 

@@ -22,7 +22,6 @@ function ToTopButton() {
         setIsScrolled(false);
       }
     };
-    console.log(isScrolled)
     // Attach the event listener to the scroll event
     window.addEventListener('scroll', handleScroll);
 
@@ -33,23 +32,28 @@ function ToTopButton() {
   }, [scrollY]);
     
     const scrollToTop = () => {
-        animateScroll.scrollToTop()
+        animateScroll.scrollToTop(
+          {
+            duration: 500,
+            smooth: "easeInOutQuad",
+          }
+        )
     }
 
   return (
     <div>
         <MediaQuery minWidth={700}>
             <div className= {isScrolled ? 
-                'fixed bottom-0 right-0 m-4 rounded-full p-2 bg-orange-400 cursor-pointer z-50 ease-in duration-150'
-                :'fixed -top-full m-4 rounded-full p-2 bg-orange-400 ease-out duration-150 z-50'}
+                'fixed bottom-6 right-6 rounded-full p-3 bg-orange-400 cursor-pointer z-50 ease-in duration-150 hover:scale-125 hover:transition-all'
+                :'fixed -top-full rounded-full p-2 bg-orange-400 ease-out duration-150 z-50'}
             onClick={scrollToTop}>
-                <ArrowUpward htmlColor='white' fontSize='medium'/>
+                <ArrowUpward htmlColor='white' fontSize='medium'/>                
             </div>
         </MediaQuery>
         <MediaQuery maxWidth={700}>
             <div className= {isScrolled ? 
-                'fixed bottom-0 right-0 m-4 rounded-full p-2 bg-orange-400 cursor-pointer z-50 ease-in duration-150'
-                :'fixed -top-full m-4 rounded-full p-2 bg-orange-400 ease-out duration-150 z-50'}
+                'fixed bottom-3 right-3 rounded-full p-2 bg-orange-400 cursor-pointer z-50 ease-in duration-150 '
+                :'fixed -top-full rounded-full p-2 bg-orange-400 ease-out duration-150 z-50'}
             onClick={scrollToTop}>
                 <ArrowUpward htmlColor='white' fontSize='medium'/>
             </div>

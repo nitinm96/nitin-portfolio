@@ -11,14 +11,14 @@ function HomeWeb(){
             <div name="Home" className="relative">
                 {/* DESKTOP VIEW START */}
                 <MediaQuery minWidth={700}>
-                     <div className="absolute -z-10">
-                            <ParticleBackground />
-                        </div>  
+                    <div className="absolute -z-10">
+                        <ParticleBackground />
+                    </div>  
                     <div className="flex items-center justify-center w-full h-screen">                                  
-                        <div className="flex items-center justify-center m-8 bottom-10 w-2/4">
+                        <div className="flex items-center justify-center m-8 mb-44 w-2/4">
                             <img src={bitmojiPic} width={475} className="rounded-full shadow-2xl bg-white" alt="proile-pic.png"/>
                         </div>
-                        <div className="m-8 w-2/4">
+                        <div className="m-8 mb-44 w-2/4">
                         
                             <div className="text-4xl mb-4">
                                 Hello, my name is                                       
@@ -101,7 +101,7 @@ function HomeWeb(){
                                 />
                             </span>
                         </div> 
-                        <div className="flex items-center justify-center w-full space-x-5">
+                        <div className="flex items-center justify-center w-full mb-36 space-x-5">
                              <Button variant='outlined' href="https://github.com/nitinm96" target="_blank">
                                 <SiGithub /> 
                                 <div className="px-3 text-sm">
