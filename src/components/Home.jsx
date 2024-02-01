@@ -8,14 +8,14 @@ import { Button } from "@mui/material";
 
 function HomeWeb(){
     return(       
-            <div>
-                {/* DESKTOPV VIEW START */}
+            <div name="Home" className="relative">
+                {/* DESKTOP VIEW START */}
                 <MediaQuery minWidth={700}>
-                    <div name="Home" className="flex items-center justify-center w-full h-screen">     
-                        <div className="absolute -z-10">
+                     <div className="absolute -z-10">
                             <ParticleBackground />
-                        </div>        
-                        <div className="flex items-center justify-center m-8 w-2/4">
+                        </div>  
+                    <div className="flex items-center justify-center w-full h-screen">                                  
+                        <div className="flex items-center justify-center m-8 bottom-10 w-2/4">
                             <img src={bitmojiPic} width={475} className="rounded-full shadow-2xl bg-white" alt="proile-pic.png"/>
                         </div>
                         <div className="m-8 w-2/4">
@@ -68,10 +68,10 @@ function HomeWeb(){
 
                 {/* MOBILE VIEW START */}
                 <MediaQuery maxWidth={700}>
+                    <div className="absolute -z-10">
+                        <ParticleBackground />
+                    </div>  
                     <div name = "Home" className="flex flex-col items-center justify-center w-full h-screen">     
-                        <div className="absolute -z-10">
-                            <ParticleBackground />
-                        </div>        
                         <div className="text-2xl">                   
                             Hello, my name is                                 
                             <div className="text-5xl">

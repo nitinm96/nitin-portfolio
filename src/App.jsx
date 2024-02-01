@@ -3,6 +3,7 @@ import './App.css'
 import NavgationMenu from './components/NavigationMenu.jsx'
 import Home from './components/Home.jsx'
 import About from './components/About.jsx'
+import ToTopButton from "./components/ToTopButton.jsx";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <NavgationMenu />
       <Home />       
       <About />
+      <ToTopButton />
     </>
   )
 }

@@ -5,34 +5,39 @@ import { SiAdobe, SiAngular, SiCss3, SiFigma, SiFirebase, SiGithub, SiHtml5, SiJ
 
 function AboutWeb() {
   return (
-    <div name="About"  className=''>
+    <div name="About"  className='relative'>
       {/* DESKTOP VIEW START */}
 
       <MediaQuery minWidth={700}>
         <div className="h-screen w-full bg-[#0478FF]">
-          <div className="flex items-center justify-center text-4xl w-full py-10 text-white">
-            About
+          <div className="flex items-center justify-center py-10">
+            <div className='text-4xl bg-white rounded-2xl py-3 px-5'>
+              About
+            </div>
           </div>
-          <div className='flex items-center justify-center'>               
-                
-            <img src={profilePic} width={250} className="rounded-full shadow-2xl shadow-gray-400" alt="proile-pic.png"/>
-              <div className="flex flex-col items-center justify-center w-2/4 bg-white p-5 rounded-md space-y-5">
-                <div>
+          <div className='flex item-center justify-center'>                         
+            <div className="flex items-center justify-center w-9/12 bg-white p-5 rounded-xl space-y-5">
+              <img src={profilePic} width={250} className="rounded-full shadow-2xl mr-6" alt="proile-pic.png"/>
+                <div className='flex flex-col items-center justify-center space-y-4 '>
+              <div>
+                <p>
                   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                  when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and 
-                  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.Lorem Ipsum is simply dummy text of the printing and typesetting 
-                  industry.
-                </div>
-                <div>
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                  make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                  text ever since.
-                </div>                
+                  when an unknown printer took a galley.
+                </p>
               </div>
-              
-          </div>          
+
+              <div>
+                <p>
+                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                  make a type specimen book. 
+                </p>
+              </div>   
+                </div>                           
+            </div>              
+          </div>
+         
           <div className='flex flex-col items-center justify-center space-y-10 mt-20'>
-            <div className=' text-4xl text-white mt-20 '>
+            <div className=' text-4xl text-white'>
               SKILL SET
             </div>
             <div className='flex flex-col items-center justify-center space-y-10'>
