@@ -62,13 +62,13 @@ function AboutWeb({About1, About2}) {
 
       <MediaQuery minWidth={700}>
         <div className="flex flex-col items-center justify-center py-10 h-screen w-full bg-[#0478FF]">
-          <div className="flex items-start justify-start w-8/12 py-5">
-            <div className=' text-white text-6xl'>
+          <div className="flex items-start justify-start w-9/12 py-5">
+            <div className=' text-white text-5xl'>
               About
             </div>
           </div>
           <div className='flex item-center justify-center'>                         
-            <div className="flex items-center justify-center w-8/12 bg-white p-5 rounded-xl space-y-5 hover:scale-110 ease-in-out transition-all duration-300">
+            <div className="flex items-center justify-center w-9/12 bg-white p-5 rounded-xl space-y-5 hover:scale-110 ease-in-out transition-all duration-300">
               <img src={profilePic} width={250} className="rounded-full shadow-2xl mr-6" alt="proile-pic.png"/>
                 <div className='flex flex-col items-center justify-center text-balance space-y-4 '>
               <div>
@@ -85,13 +85,14 @@ function AboutWeb({About1, About2}) {
             </div>              
           </div>
          
-          <div className='flex flex-col items-center justify-center space-y-10 mt-20'>
-            <div className='flex items-center justify-center text-4xl text-white'>
-              <ChevronLeft htmlColor='black' style={{fontSize:'4rem',}} className=''/> 
-              <span className=''>Skill Set</span>
+          <div className='flex flex-col items-center justify-center'>
+            <div className='flex items-center justify-center text-4xl text-white py-10'>
+              <ChevronLeft htmlColor='black' style={{fontSize:'4rem'}}/> 
+              <div>Skill Set</div>
               <ChevronRight htmlColor='black' style={{fontSize:'4rem'}}/>
-            </div>        
-             <div className='flex items-center justify-between space-x-20 '>
+            </div>  
+
+             <div className='flex items-center justify-between space-x-20'>
               {
                 iconNames.map((icon, index) => (
                   <>

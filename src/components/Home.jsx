@@ -6,7 +6,7 @@ import ParticleBackground from './ParticleBackground'
 import MediaQuery from "react-responsive";
 import { Button } from "@mui/material";
 
-function HomeWeb(){
+function HomeWeb({HomeMsg}){
     return(       
             <div name="Home" className="relative">
                 {/* DESKTOP VIEW START */}
@@ -31,8 +31,7 @@ function HomeWeb(){
                             </div>
 
                             <div className="mt-10">
-                                Ready to turn theory into practice, transform challenges into opportunities, 
-                                and embark on a journey of continuous learning in the tech world.                        
+                                {HomeMsg}                            
                             </div>          
 
                             <div className="flex text-2xl text-gray-600 bold my-10">  
