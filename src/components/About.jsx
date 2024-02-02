@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MediaQuery from 'react-responsive'
 import profilePic from '../assets/profile-pic.png'
 import profilePicLong from '../assets/profile-pic-long.png'
 import { SiAdobecreativecloud, SiCss3,SiFigma, SiFirebase, SiGithub, SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiVisualstudiocode} from '@icons-pack/react-simple-icons'
 import { ChevronLeft, ChevronRight } from '@mui/icons-material'
-
 function AboutWeb({About1, About2}) {
+
+
   const iconNames = [{
     id: 1,
     name: "HTML",
@@ -62,7 +63,7 @@ function AboutWeb({About1, About2}) {
   },
   {
 
-     id: 10,
+    id: 10,
     name: "Creative Cloud",
     icon: <SiAdobecreativecloud color='#DA1F26' size={65} />,
     website: "https://www.adobe.com/creativecloud.html",
@@ -100,7 +101,7 @@ function AboutWeb({About1, About2}) {
 
               <div className='flex flex-col items-center justify-center py-7 space-y-5 bg-white/80 px-12 rounded-xl'>
                 {[iconNames.slice(0, 5), iconNames.slice(5, 10)].map((row, rowIndex) => (
-                  <div className='flex items-center justify-between space-x-20' key={rowIndex}>
+                  <div className='flex flex-wrap items-center justify-around space-x-10' key={rowIndex}>
                     {row.map((icon) => (
                       <div className='flex flex-col items-center justify-center' key={icon.id}>
                         <a className={iconStyle} href={icon.website} target='_blank'>
@@ -144,23 +145,24 @@ function AboutWeb({About1, About2}) {
                 <div>Skill Set</div>
                 <ChevronRight htmlColor='black' style={{fontSize:'2rem'}}/>
               </div>  
+              
+              {/* <div className='flex flex-col space-y-10 bg-white/80 px-12 rounded-xl'>
 
-              <div className='flex flex-col space-y-10 bg-white/80 px-12 rounded-xl scale-[45%] md:scale-[75%]'>
                 {[iconNames.slice(0, 5), iconNames.slice(5, 10)].map((row, rowIndex) => (
-                  <div className='flex items-center justify-between space-x-20' key={rowIndex}>
-                    {row.map((icon) => (
+                  <div className='flex flex-wrap items-center justify-between space-x-5' key={rowIndex}>                    
+                    {row.map((icon) => (                      
                       <div className='flex flex-col items-center justify-center' key={icon.id}>
                         <a className={iconStyle} href={icon.website} target='_blank'>
                           {icon.icon}
                         </a>
-                        <a className='text-[#0478FF] text-lg' href={icon.website} target='_blank'>
+                        <a className='text-[#0478FF] text-sm' href={icon.website} target='_blank'>
                           {icon.name}
                         </a>
                       </div>
                     ))}
                   </div>
                 ))}
-              </div>                         
+              </div>                          */}
             </div> 
           </div>
         </div>

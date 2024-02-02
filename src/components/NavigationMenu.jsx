@@ -4,27 +4,9 @@ import Weather from './Weather';
 import MediaQuery from 'react-responsive';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import {CloseRounded } from '@mui/icons-material';
+import links from '../data/links';
 
 function NavMenu() {
-    
-    const links = [
-        {
-            id: 1,
-            link: "Home",
-        },
-        {
-            id: 2,
-            link: "About",
-        },
-        {
-            id: 3,
-            link: "Projects",
-        },
-        {
-            id: 4,
-            link: "Contact Me",
-        }
-    ];
 
     const [nav, setNav] = useState(false);
 
@@ -49,7 +31,7 @@ function NavMenu() {
                 </div>     
                 <ul className='flex flex-row items-center justify-center z-10'>
                     {links.map(({id, link}) => (
-                        <li key={id} className="hover:scale-110 hover:text-gray-400 transition-all duration-150 ease-out text-[#0478FF] font-bold m-8 cursor-pointer">
+                        <li key={id} className="hover:scale-110 hover:text-gray-400 transition-all duration-150 ease-out text-[#0478FF] m-8 cursor-pointer">
                             <Link to={link} activeClass='true' spy={true} offset={-96} smooth duration={500} className=''>
                                 {link}
                             </Link>
@@ -82,7 +64,7 @@ function NavMenu() {
         
                     <ul className='flex flex-col items-center justify-center w-full h-screen text-2xl text-white'>    
                             {links.map(({id, link}) => (
-                                <li className="font-bold m-7">
+                                <li key={id} className="font-bold m-7">
                                     <Link to={link} activeClass='true' spy={true} offset={-96} smooth duration={500} onClick={handleNav}>
                                         {link}
                                     </Link>
