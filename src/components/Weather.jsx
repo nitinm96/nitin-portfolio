@@ -40,16 +40,61 @@ function WeatherWeb() {
 //         setAllowLocation(false);
 //       }
 //     };
-
 //     fetchData();
 //   }, []);
  
   return (    
     
-        <div className= {allowLocation ? 'opacity-100 ease-in duration-300' : 'opacity-0'}>
+    // LIVE DATA CODE
+        // <div className= {allowLocation ? 'opacity-100 ease-in duration-300' : 'opacity-0'}>
+        //     <MediaQuery minWidth={1024}>
+        //         <div className= {allowLocation ? "flex flex-col items-center justify-center w-full text-xl -space-y-4": 'collapse'}>                      
+        //             <div className='flex items-center justify-center w-full -space-x-1'>                 
+        //                 {/* 10 <sup>°C</sup> */}
+        //                 {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup> 
+        //                 <span className='m-1'>
+        //                     {/* <img src="https://openweathermap.org/img/wn/04d@2x.png" width={50}/>         */}
+        //                     <img src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`} width={60} height={50} alt='weather-icon' />
+        //                 </span>             
+        //                 <div>
+        //                     {/* Clouds                 */}
+        //                     {weatherData && weatherData.current.weather[0].main}                                    
+        //                 </div>                
+        //             </div>   
+        //             <div className='flex items-center justify-end text-sm w-full'>                                             
+        //                 {/* Brampton, ON */}
+        //                 {locationString} 
+        //                 <LocationOnOutlined htmlColor='#0478FF' />                       
+        //             </div>                                             
+        //         </div>  
+        //     </MediaQuery>
+        //     <MediaQuery maxWidth={700}>
+        //         <div className= {allowLocation ? "flex flex-col items-end justify-end w-full -space-y-3": 'collapse'}>                      
+        //             <div className='flex items-center justify-end w-full mr-2'>
+        //                 <span className=''>
+        //                     {/* <img src="https://openweathermap.org/img/wn/04d@2x.png" width={50}/>         */}
+        //                     <img src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`} width={60} height={50} alt='weather-icon' />
+        //                 </span>                   
+        //                 {/* 10 <sup>°C</sup> */}
+        //                 {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup>                                                    
+        //             </div>   
+        //             <div className='flex items-center justify-end w-36 text-sm'>                                             
+        //                 {/* Brampton, ON */}
+        //                 {locationString} 
+        //                 <LocationOnOutlined htmlColor='#0478FF' fontSize='medium' />                       
+        //             </div>                                             
+        //         </div> 
+        //     </MediaQuery>           
+        // </div>           
+        
+        
+
+    // HARD CODED DATA CODE
+
+                <div className= {allowLocation ? 'opacity-100 ease-in duration-300' : 'opacity-0'}>
             <MediaQuery minWidth={1024}>
-                <div className= {allowLocation ? "flex flex-col items-center justify-center w-full text-xl mx-4": 'collapse'}>                      
-                    <div className='flex items-center justify-center w-full'>                 
+                <div className= {allowLocation ? "flex flex-col items-center justify-center w-full text-xl -space-y-4": 'collapse'}>                      
+                    <div className='flex items-center justify-center w-full -space-x-1'>                 
                         10 <sup>°C</sup>
                         {/* {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup>  */}
                         <span className='m-1'>
@@ -69,23 +114,23 @@ function WeatherWeb() {
                 </div>  
             </MediaQuery>
             <MediaQuery maxWidth={700}>
-                <div className= {allowLocation ? "flex flex-col items-end justify-end w-full": 'collapse'}>                      
-                    <div className='flex items-center justify-end mr-4'>
-                        <span className='m-1'>
+                <div className= {allowLocation ? "flex flex-col items-end justify-end w-full -space-y-3": 'collapse'}>                      
+                    <div className='flex items-center justify-end w-full mr-2'>
+                        <span className=''>
                             <img src="https://openweathermap.org/img/wn/04d@2x.png" width={50}/>        
                             {/* <img src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`} width={60} height={50} alt='weather-icon' /> */}
                         </span>                   
                         10 <sup>°C</sup>
                         {/* {Math.round(weatherData && weatherData.current.feels_like) }<sup>°C</sup>                                                     */}
                     </div>   
-                    <div className='flex items-center justify-center w-36'>                                             
+                    <div className='flex items-center justify-end w-36 text-sm'>                                             
                         Brampton, ON
                         {/* {locationString}  */}
-                        <LocationOnOutlined htmlColor='#0478FF' />                       
+                        <LocationOnOutlined htmlColor='#0478FF' fontSize='medium' />                       
                     </div>                                             
                 </div> 
             </MediaQuery>           
-        </div>              
+        </div>   
   )
 }
 

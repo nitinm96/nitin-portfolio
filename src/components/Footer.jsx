@@ -9,8 +9,8 @@ function Footer(){
     return (
         <div className="relative bg-[#303030]">
             <MediaQuery minWidth={700}>                
-                <div className="flex flex-col items-center justify-center w-full">
-                    <div className="flex flex-col items-center justify-center w-full space-y-5 m-5">
+                <div className="flex flex-col items-center justify-center w-full ">
+                    <div className="flex flex-col items-center justify-center w-full space-y-3 m-5">
                         <div className="text-white text-2xl">
                             CONNECT WITH ME
                         </div>
@@ -22,7 +22,7 @@ function Footer(){
                         </div>                        
                     </div>
                     <div>
-                        <p className=" text-white text-sm">
+                        <p className=" text-white text-sm ">
                             &copy; {year} | DESIGNED AND DEVELOPED BY <span className="text-[#0478FF] font-bold">NITIN MINHAS.</span>
                         </p>                       
                     </div>
