@@ -58,7 +58,7 @@ function NavMenu() {
                     nav ? 'absolute ease-in duration-200 left-0 top-0 w-full h-screen bg-black/90 backdrop-blur-md z-20'  : 
                             'absolute w-full h-screen opacity-0 -left-full -top-full ease-in duration-200'
                 }>
-                    <div className='absolute top-0 right-0'>
+                    <div className='absolute top-0 left-0'>
                         <CloseRounded htmlColor='white' fontSize='medium' onClick={handleNav} className='z-20 cursor-pointer hover:opacity-55 m-4' />
                     </div> 
         
