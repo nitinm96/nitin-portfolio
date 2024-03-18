@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MediaQuery from "react-responsive";
 
-function WeatherWeb() {
+function Weather() {
   const [weatherData, setWeatherData] = useState(null);
   const [locationData, setLocationData] = useState(null);
   const [longitude, setLongitude] = useState();
@@ -155,4 +155,4 @@ function WeatherWeb() {
   );
 }
 
-export default WeatherWeb;
+export default Weather;
