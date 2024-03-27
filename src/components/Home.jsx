@@ -14,7 +14,7 @@ function HomeWeb({ HomeMsg }) {
         <div className="absolute -z-10">
           <ParticleBackground />
         </div>
-        <div className="flex items-center justify-center w-full h-screen">
+        <div className="relative flex items-center justify-center w-full h-screen top-6">
           <div className="flex items-center justify-center m-8 mb-44 w-2/4">
             <img
               src={bitmojiPic}
@@ -84,7 +84,7 @@ function HomeWeb({ HomeMsg }) {
         </div>
         <div
           name="Home"
-          className="flex flex-col items-center justify-center w-full h-screen"
+          className="relative flex flex-col items-center justify-center w-full h-screen top-20"
         >
           <div className="text-2xl">
             Hello, my name is

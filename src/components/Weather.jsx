@@ -95,7 +95,7 @@ function Weather() {
         allowLocation ? "opacity-100 ease-in duration-300" : "opacity-0"
       }
     >
-      <MediaQuery minWidth={1024}>
+      <MediaQuery minWidth={825}>
         <div
           className={
             allowLocation
@@ -125,7 +125,7 @@ function Weather() {
           </div>
         </div>
       </MediaQuery>
-      <MediaQuery maxWidth={700}>
+      <MediaQuery maxWidth={824}>
         <div
           className={
             allowLocation

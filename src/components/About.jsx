@@ -20,61 +20,61 @@ function AboutWeb({ About1, About2 }) {
     {
       id: 1,
       name: "HTML",
-      icon: <SiHtml5 color="#E34F26" size={60} />,
+      icon: <SiHtml5 color="#E34F26" size={45} />,
       website: "https://www.w3schools.com/html/",
     },
     {
       id: 2,
       name: "CSS",
-      icon: <SiCss3 color="#1572B6" size={60} />,
+      icon: <SiCss3 color="#1572B6" size={45} />,
       website: "https://www.w3schools.com/css/",
     },
     {
       id: 3,
       name: "Javascript",
-      icon: <SiJavascript color="#F7DF1E" size={60} />,
+      icon: <SiJavascript color="#F7DF1E" size={45} />,
       website: "https://www.javascript.com/",
     },
     {
       id: 4,
       name: "React",
-      icon: <SiReact color="#61DAFB" size={60} />,
+      icon: <SiReact color="#61DAFB" size={45} />,
       website: "https://reactjs.org/",
     },
     {
       id: 5,
       name: "Tailwind CSS",
-      icon: <SiTailwindcss color="#06B6D4" size={60} />,
+      icon: <SiTailwindcss color="#06B6D4" size={45} />,
       website: "https://tailwindcss.com/",
     },
     {
       id: 6,
       name: "VS Code",
-      icon: <SiVisualstudiocode color="#007ACC" size={60} />,
+      icon: <SiVisualstudiocode color="#007ACC" size={45} />,
       website: "https://code.visualstudio.com/",
     },
     {
       id: 7,
       name: "Firebase",
-      icon: <SiFirebase color="#FFCA28" size={60} />,
+      icon: <SiFirebase color="#FFCA28" size={45} />,
       website: "https://firebase.google.com/",
     },
     {
       id: 8,
       name: "Figma",
-      icon: <SiFigma color="#F24E1E" size={60} />,
+      icon: <SiFigma color="#F24E1E" size={45} />,
       website: "https://www.figma.com/",
     },
     {
       id: 9,
       name: "Github",
-      icon: <SiGithub color="#181717" size={60} />,
+      icon: <SiGithub color="#181717" size={45} />,
       website: "https://github.com/",
     },
     {
       id: 10,
       name: "Creative Cloud",
-      icon: <SiAdobecreativecloud color="#DA1F26" size={60} />,
+      icon: <SiAdobecreativecloud color="#DA1F26" size={45} />,
       website: "https://www.adobe.com/creativecloud.html",
     },
   ];
@@ -95,7 +95,7 @@ function AboutWeb({ About1, About2 }) {
               alt="proile-pic.png"
             />
           </div>
-          <div className="flex flex-col items-start justify-center mx-auto w-7/12 space-y-10">
+          <div className="flex flex-col items-start justify-center mx-auto w-7/12 space-y-5">
             <div className="text-white text-5xl font-bold">About Me</div>
             <div className="text-white space-y-2 text-md">
               <p>{About1}</p>
@@ -108,8 +108,45 @@ function AboutWeb({ About1, About2 }) {
                 <ChevronRight htmlColor="white" style={{ fontSize: "4rem" }} />
               </div>
 
-              <div className="flex flex-col items-center justify-center py-7 space-y-5 bg-white/80 px-10 rounded-xl">
-                {[iconNames.slice(0, 5), iconNames.slice(5, 10)].map(
+              <div className="inline-flex flex-nowrap py-7 w-full bg-white/80 rounded-xl overflow-hidden">
+                <div className="flex items-center justify-center max-w-none animate-infinite-scroll">
+                  {iconNames.map((icon) => (
+                    <div
+                      className="flex items-center justify-center mx-3"
+                      key={icon.id}
+                    >
+                      <a
+                        className={iconStyle}
+                        href={icon.website}
+                        target="_blank"
+                      >
+                        <div className="text-[#0478FF] text-lg flex items-center">
+                          <div>{icon.icon}</div>
+                          <div className="w-36 pl-2">{icon.name}</div>
+                        </div>
+                      </a>
+                    </div>
+                  ))}
+                  {iconNames.map((icon) => (
+                    <div
+                      className="flex items-center justify-center mx-3 "
+                      key={icon.id}
+                    >
+                      <a
+                        className={iconStyle}
+                        href={icon.website}
+                        target="_blank"
+                      >
+                        <div className="text-[#0478FF] text-lg flex items-center">
+                          <div>{icon.icon}</div>
+                          <div className="w-36 pl-2">{icon.name}</div>
+                        </div>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+
+                {/* {[iconNames.slice(0, 5), iconNames.slice(5, 10)].map(
                   (row, rowIndex) => (
                     <div
                       className="flex flex-wrap items-center justify-around space-x-10"
@@ -121,24 +158,18 @@ function AboutWeb({ About1, About2 }) {
                           key={icon.id}
                         >
                           <a
-                            className={iconStyle}
+                            className="text-[#0478FF] text-lg flex items-center"
                             href={icon.website}
                             target="_blank"
                           >
-                            {icon.icon}
-                          </a>
-                          <a
-                            className="text-[#0478FF] text-lg"
-                            href={icon.website}
-                            target="_blank"
-                          >
-                            {icon.name}
+                            <div className={iconStyle}>{icon.icon}</div>
+                            <div className="pl-2">{icon.name}</div>
                           </a>
                         </div>
                       ))}
                     </div>
                   )
-                )}
+                )} */}
               </div>
             </div>
           </div>

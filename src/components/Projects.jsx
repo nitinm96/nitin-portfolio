@@ -51,7 +51,6 @@ function Projects() {
       id="hideScrollBar"
       className="relative w-full h-screen overflow-y-scroll"
     >
-      
       <MediaQuery minWidth={700}>
         <div className="flex flex-col items-center justify-center ">
           <div className="text-4xl text-[#0478FF] m-16 font-bold ">

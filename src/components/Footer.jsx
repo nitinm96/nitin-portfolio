@@ -26,8 +26,8 @@ function Footer() {
           </div>
           <div>
             <p className=" text-white text-sm">
-              &copy; {year} | DESIGNED AND DEVELOPED BY{" "}
-              <span className="text-[#0478FF] font-bold">NITIN MINHAS.</span>
+              &copy; {year} | DESIGNED AND DEVELOPED BY
+              <span className="text-[#0478FF] font-bold"> NITIN MINHAS.</span>
             </p>
           </div>
         </div>
