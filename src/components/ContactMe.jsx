@@ -33,7 +33,8 @@ function ContactMe() {
         setName("");
         setEmail("");
         setMessage("");
-        emailStatus(true);
+        setEmailStatus(true);
+        console.log(emailStatus);
         alert("Email sent successfully!");
       },
       (err) => {
@@ -51,7 +52,7 @@ function ContactMe() {
           <div className="flex">
             <div className="flex flex-col items-center justify-center bg-white/80 shadow-2xl rounded-l-lg p-5 px-24 my-10 text-center">
               <Handshake htmlColor="#0478FF" style={{ fontSize: "6rem" }} />
-              Email me for any queries or just to say hi!
+              Email me for any queries or just to connect!
             </div>
             <div className="bg-white shadow-2xl rounded-lg py-5 w-full">
               <div className="flex flex-col items-center justify-center">

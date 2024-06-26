@@ -24,7 +24,7 @@ function Projects() {
         "Snapchat clone is a web-based application that replicates the core functionality of Snapchat, a popular multimedia messaging app.",
       img: snapchatBg,
       imgLandscape: snapchatBgLandscape,
-      alt: "snapchat-app-image",
+      alt: "snapchat_app_image",
       github: "https://github.com/nitinm96/snapchat_clone",
     },
   ];
