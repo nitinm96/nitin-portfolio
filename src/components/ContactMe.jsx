@@ -47,8 +47,8 @@ function ContactMe() {
   return (
     <div name="Contact Me" className="relative bg-[#0478FF]">
       <MediaQuery minWidth={700}>
-        <div className="flex flex-col items-center justify-start w-full h-screen space-y-10  ">
-          <div className="text-white text-4xl font-bold m-16">Get In Touch</div>
+        <div className="flex flex-col items-center justify-start w-full h-screen  ">
+          <div className="text-white text-4xl font-bold mt-8 mb-5">Get In Touch</div>
           <div className="flex">
             <div className="flex flex-col items-center justify-center bg-white/80 shadow-2xl rounded-l-lg p-5 px-24 my-10 text-center">
               <Handshake htmlColor="#0478FF" style={{ fontSize: "6rem" }} />
