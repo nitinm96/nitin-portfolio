@@ -8,8 +8,6 @@ function Weather() {
   const [locationData, setLocationData] = useState(null);
   const [longitude, setLongitude] = useState();
   const [latitude, setLatitude] = useState();
-  const apiKeyOpenWeather = "fd2a234042a5b011864b06e335b8673f";
-  const apiKeyOpenCage = "4ed66cbef5ff4b679bd021334fcb3842";
   const locationInfo = locationData && locationData.components;
   const locationString = locationInfo
     ? locationInfo.city
@@ -33,13 +31,17 @@ function Weather() {
         // Fetch city name using OpenCage Geocoding API
 
         const openCageResponse = await axios.get(
-          `https://api.opencagedata.com/geocode/v1/json?q=${roundedLatitude}+${roundedLongitude}&key=${apiKeyOpenCage}`
+          `https://api.opencagedata.com/geocode/v1/json?q=${roundedLatitude}+${roundedLongitude}&key=${
+            import.meta.env.VITE_apiKeyOpenCage
+          }`
         );
         setLocationData(openCageResponse.data.results[0]);
 
         // Fetch weather data using the obtained latitude and longitude
         const openWeatherResponse = await axios.get(
-          `https://api.openweathermap.org/data/3.0/onecall?lat=${roundedLatitude}&lon=${roundedLongitude}&exclude=alerts&units=metric&appid=${apiKeyOpenWeather}`
+          `https://api.openweathermap.org/data/3.0/onecall?lat=${roundedLatitude}&lon=${roundedLongitude}&exclude=alerts&units=metric&appid=${
+            import.meta.env.VITE_apiKeyOpenWeather
+          }`
         );
         setWeatherData(openWeatherResponse.data);
         setAllowLocation(true);

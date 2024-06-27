@@ -8,9 +8,6 @@ import { SiTruenasHex } from "@icons-pack/react-simple-icons";
 
 function ContactMe() {
   const emailForm = useRef();
-  const serviceID = "service_ioxirv4";
-  const templateID = "template_8cdx8oj";
-  const publicKey = "x8Vii_UOTUqM2WA2K";
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -26,29 +23,38 @@ function ContactMe() {
       message: message,
     };
 
-    emailjs.send(serviceID, templateID, templateParams, publicKey).then(
-      (response) => {
-        console.log(`Status ${response.status}`, response.text);
-        emailForm.current.reset();
-        setName("");
-        setEmail("");
-        setMessage("");
-        setEmailStatus(true);
-        console.log(emailStatus);
-        alert("Email sent successfully!");
-      },
-      (err) => {
-        console.log("FAILED...", err.text);
-        setEmailStatus(false);
-      }
-    );
+    emailjs
+      .send(
+        import.meta.env.VITE_serviceID,
+        import.meta.env.VITE_templateID,
+        templateParams,
+        import.meta.env.VITE_publicKey
+      )
+      .then(
+        (response) => {
+          console.log(`Status ${response.status}`, response.text);
+          emailForm.current.reset();
+          setName("");
+          setEmail("");
+          setMessage("");
+          setEmailStatus(true);
+          console.log(emailStatus);
+          alert("Email sent successfully!");
+        },
+        (err) => {
+          console.log("FAILED...", err.text);
+          setEmailStatus(false);
+        }
+      );
   };
 
   return (
     <div name="Contact Me" className="relative bg-[#0478FF]">
       <MediaQuery minWidth={700}>
         <div className="flex flex-col items-center justify-start w-full h-screen  ">
-          <div className="text-white text-4xl font-bold mt-8 mb-5">Get In Touch</div>
+          <div className="text-white text-4xl font-bold mt-8 mb-5">
+            Get In Touch
+          </div>
           <div className="flex">
             <div className="flex flex-col items-center justify-center bg-white/80 shadow-2xl rounded-l-lg p-5 px-24 my-10 text-center">
               <Handshake htmlColor="#0478FF" style={{ fontSize: "6rem" }} />
