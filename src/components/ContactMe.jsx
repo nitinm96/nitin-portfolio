@@ -66,7 +66,7 @@ function ContactMe() {
                     <div>
                       <div>Name</div>
                       <input
-                        className="rounded-lg p-2 bg-[#0478FF]/10 px-10 md:px:0 md:pr-32"
+                        className="rounded-lg p-2 bg-[#0478FF]/10 md:pr-32"
                         type="text"
                         placeholder="John Doe"
                         required
@@ -76,7 +76,7 @@ function ContactMe() {
                     <div>
                       <div>Email</div>
                       <input
-                        className="rounded-lg p-2 bg-[#0478FF]/10 px-10 md:px:0 md:pr-32"
+                        className="rounded-lg p-2 bg-[#0478FF]/10 md:pr-32"
                         type="email"
                         placeholder="example@gmail.com"
                         required
@@ -87,7 +87,7 @@ function ContactMe() {
                   <div className="mt-5">
                     <div>Message</div>
                     <textarea
-                      className="rounded-lg p-2 bg-[#0478FF]/10 h-80 w-full px-10 md:px:0"
+                      className="rounded-lg p-2 bg-[#0478FF]/10 h-80 w-full"
                       name="message"
                       placeholder="Hey there!"
                       required
