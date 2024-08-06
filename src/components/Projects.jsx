@@ -1,14 +1,22 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import React, { useState } from "react";
-import MediaQuery from "react-responsive";
 import "../App.css";
 import snapchatBg from "../assets/snapchat-bg.png";
 import closetAppImg from "../assets/closet-app-bg.png";
 import closetAppImgLandscape from "../assets/closet-app-landscape.png";
 import snapchatBgLandscape from "../assets/snapchat-landscape.png";
-
+import lvmLogoLong from "../assets/lvm-bg.png";
+import lvmLandscape from "../assets/lvm-landscape.png";
 function Projects() {
   const projectData = [
+    {
+      title: "LVM Counselling",
+      description: "LVM Counselling is a website for a psychotherapist that provides counseling services to individuals dealing with various mental health issues.",
+      img: lvmLogoLong,
+      imgLandscape: lvmLandscape,
+      alt: "lvm_counselling_image",
+      github: "https://github.com/nitinm96/LVM-Counselling",
+    },
     {
       title: "Closet Application",
       description:
@@ -26,7 +34,7 @@ function Projects() {
       imgLandscape: snapchatBgLandscape,
       alt: "snapchat_app_image",
       github: "https://github.com/nitinm96/snapchat_clone",
-    },
+    }
   ];
 
   const [hoverStates, setHoverStates] = useState(
@@ -49,21 +57,20 @@ function Projects() {
     <div
       name="Projects"
       id="hideScrollBar"
-      className="relative w-full h-screen overflow-y-scroll"
+      className="relative overflow-y-scroll"
     >
-      <MediaQuery minWidth={700}>
         <div className="flex flex-col items-center justify-center ">
-          <div className="text-4xl text-[#0478FF] m-16 font-bold ">
+          <div className="text-4xl text-[#0478FF] m-8 font-bold ">
             Projects
           </div>
 
           {/* project card template */}
-          <div className="flex flex-wrap justify-center items-center m-5">
+          <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 gap-y-5">
             {projectData.map((projects, index) => {
               return (
                 <div
                   key={index}
-                  className="relative flex items-center justify-center w-2/6 bg-slate-200/30 shadow-xl rounded-3xl space-x-9 p-3 mx-16 my-10 hover:scale-110 duration-300"
+                  className="relative flex items-center justify-center bg-slate-200/30 shadow-xl rounded-3xl space-x-9 p-3 mx-16 my-4 hover:scale-110 duration-300"
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={() => handleMouseLeave(index)}
                 >
@@ -108,7 +115,6 @@ function Projects() {
             })}
           </div>
         </div>
-      </MediaQuery>
     </div>
   );
 }

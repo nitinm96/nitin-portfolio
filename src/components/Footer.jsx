@@ -14,7 +14,6 @@ function Footer() {
 
   return (
     <div className="relative">
-      <MediaQuery minWidth={700}>
         <div className="flex flex-col items-center justify-center w-full pb-2 bg-[#303030] ">
           <div className="flex flex-col items-center justify-center w-full space-y-3 m-5">
             <div className="text-white text-2xl">CONNECT WITH ME</div>
@@ -56,7 +55,6 @@ function Footer() {
             </p>
           </div>
         </div>
-      </MediaQuery>
     </div>
   );
 }

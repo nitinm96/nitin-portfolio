@@ -19,7 +19,7 @@ function NavMenu() {
       <MediaQuery minWidth={700}>
         <nav
           id="nav-container"
-          className="flex items-center justify-between z-20"
+          className="sticky flex items-center justify-between z-20"
         >
           {/* nav bar rectangle backround */}
           <div className="absolute h-24 top-0 left-0 w-full bg-white/80 backdrop-blur-md drop-shadow-md z-0"></div>

@@ -50,24 +50,23 @@ function ContactMe() {
 
   return (
     <div name="Contact Me" className="relative bg-[#0478FF]">
-      <MediaQuery minWidth={700}>
-        <div className="flex flex-col items-center justify-start w-full h-screen  ">
+        <div className="flex flex-col items-center justify-start  ">
           <div className="text-white text-4xl font-bold mt-8 mb-5">
             Get In Touch
           </div>
-          <div className="flex">
-            <div className="flex flex-col items-center justify-center bg-white/80 shadow-2xl rounded-l-lg p-5 px-24 my-10 text-center">
+          <div className="flex flex-col md:flex-row m-10">
+            <div className="flex flex-col items-center justify-center bg-white/80 shadow-2xl rounded-t-lg md:rounded-l-lg p-5 md:my-10 text-center">
               <Handshake htmlColor="#0478FF" style={{ fontSize: "6rem" }} />
               Email me for any queries or just to connect!
             </div>
-            <div className="bg-white shadow-2xl rounded-lg py-5 w-full">
+            <div className="bg-white shadow-2xl rounded-b-lg md:rounded-lg py-5">
               <div className="flex flex-col items-center justify-center">
                 <form ref={emailForm} onSubmit={sendEmail} className="mx-5">
-                  <div className="flex items-center justify-center space-x-16 my-5">
+                  <div className="flex flex-col md:flex-row gap-x-5 items-center justify-center gap-y-5">
                     <div>
                       <div>Name</div>
                       <input
-                        className="rounded-lg p-2 bg-[#0478FF]/10 pr-32"
+                        className="rounded-lg p-2 bg-[#0478FF]/10 px-10 md:px:0 md:pr-32"
                         type="text"
                         placeholder="John Doe"
                         required
@@ -77,7 +76,7 @@ function ContactMe() {
                     <div>
                       <div>Email</div>
                       <input
-                        className="rounded-lg p-2 bg-[#0478FF]/10 pr-32"
+                        className="rounded-lg p-2 bg-[#0478FF]/10 px-10 md:px:0 md:pr-32"
                         type="email"
                         placeholder="example@gmail.com"
                         required
@@ -85,22 +84,16 @@ function ContactMe() {
                       />
                     </div>
                   </div>
-                  <div className="">
+                  <div className="mt-5">
                     <div>Message</div>
                     <textarea
-                      className="rounded-lg p-2 bg-[#0478FF]/10 h-80 w-full"
+                      className="rounded-lg p-2 bg-[#0478FF]/10 h-80 w-full px-10 md:px:0"
                       name="message"
                       placeholder="Hey there!"
                       required
                       onChange={(e) => setMessage(e.target.value)}
                     />
-                    <div
-                      className={
-                        emailStatus
-                          ? "flex items-center justify-end "
-                          : "flex items-center justify-end"
-                      }
-                    >
+                    <div className="flex items-center justify-end">
                       {emailStatus ? (
                         <button
                           className="bg-[#0478FF] p-2 px-5 rounded-full my-5"
@@ -126,7 +119,6 @@ function ContactMe() {
             </div>
           </div>
         </div>
-      </MediaQuery>
     </div>
   );
 }
