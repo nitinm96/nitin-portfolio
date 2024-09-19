@@ -7,6 +7,8 @@ import closetAppImgLandscape from "../assets/closet-app-landscape.png";
 import snapchatBgLandscape from "../assets/snapchat-landscape.png";
 import lvmLogoLong from "../assets/lvm-bg.png";
 import lvmLandscape from "../assets/lvm-landscape.png";
+import articleLogoLandscape from "../assets/articlesLogoLandscape.png";
+import articleLogo from "../assets/articlesLogo.png";
 function Projects() {
   const projectData = [
     {
@@ -16,6 +18,14 @@ function Projects() {
       imgLandscape: lvmLandscape,
       alt: "lvm_counselling_image",
       github: "https://github.com/nitinm96/LVM-Counselling",
+    },    
+    {
+      title: "News Article Application",
+      description: "News Article Application provides users with real time news articles and allowing users to favorite and view articles with a clean responsive layout.",
+      img: articleLogo,
+      imgLandscape: articleLogoLandscape,
+      alt: "news_article_image",
+      github: "https://github.com/nitinm96/news-article",
     },
     {
       title: "Closet Application",

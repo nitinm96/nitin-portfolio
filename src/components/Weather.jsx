@@ -107,9 +107,7 @@ function Weather() {
             <span className="">
               {/* <img src="https://openweathermap.org/img/wn/04d@2x.png" width={50}/>         */}
               <img
-                src={`https://openweathermap.org/img/wn/${
-                  weatherData && weatherData.current.weather[0].icon
-                }@2x.png`}
+                src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`}
                 width={60}
                 height={50}
                 alt="weather-icon"
