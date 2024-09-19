@@ -116,6 +116,7 @@ function Weather() {
             {/* 10 <sup>°C</sup> */}
             {Math.round(weatherData && weatherData.current.feels_like)}
             <sup>°C</sup>
+            
           </div>
           <div className="flex items-center justify-end w-36 text-sm">
             {/* Brampton, ON */}
