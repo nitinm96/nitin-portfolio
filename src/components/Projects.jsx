@@ -1,4 +1,5 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
+import LaunchIcon from "@mui/icons-material/Launch";
 import React, { useState } from "react";
 import "../App.css";
 import snapchatBg from "../assets/snapchat-bg.png";
@@ -10,22 +11,39 @@ import lvmLandscape from "../assets/lvm-landscape.png";
 import articleLogoLandscape from "../assets/articlesLogoLandscape.png";
 import articleLogo from "../assets/articlesLogo.png";
 function Projects() {
+  //image size
+  //landscape: 400x260
+  //normal: 260x400
+  // {
+  //   title: "NL Seating Chart",
+  //   description:
+  //     "NL Seating Chart was made to allow guests to find their designated table at events such as weddings, engagement parties, and receptions. ",
+  //   img: lvmLogoLong,
+  //   imgLandscape: lvmLandscape,
+  //   alt: "NL_seating_chart_img",
+  //   github: "https://github.com/nitinm96/seating-chart",
+  //   liveLink: "https://nlfindyourseat.netlify.app",
+  // },
   const projectData = [
     {
       title: "LVM Counselling",
-      description: "LVM Counselling is a website for a psychotherapist that provides counseling services to individuals dealing with various mental health issues.",
+      description:
+        "LVM Counselling is a website for a psychotherapist that provides counseling services to individuals dealing with various mental health issues.",
       img: lvmLogoLong,
       imgLandscape: lvmLandscape,
       alt: "lvm_counselling_image",
       github: "https://github.com/nitinm96/LVM-Counselling",
-    },    
+      liveLink: "https://lvmcounselling.netlify.app",
+    },
     {
       title: "News Article Application",
-      description: "News Article Application provides users with real time news articles and allowing users to favorite and view articles with a clean responsive layout.",
+      description:
+        "News Article Application provides users with real time news articles and allowing users to favorite and view articles with a clean responsive layout.",
       img: articleLogo,
       imgLandscape: articleLogoLandscape,
       alt: "news_article_image",
       github: "https://github.com/nitinm96/news-article",
+      liveLink: "",
     },
     {
       title: "Closet Application",
@@ -35,6 +53,7 @@ function Projects() {
       imgLandscape: closetAppImgLandscape,
       alt: "closet_app_image",
       github: "https://github.com/nitinm96/Closet_Application",
+      liveLink: "",
     },
     {
       title: "Snapchat Clone",
@@ -44,7 +63,8 @@ function Projects() {
       imgLandscape: snapchatBgLandscape,
       alt: "snapchat_app_image",
       github: "https://github.com/nitinm96/snapchat_clone",
-    }
+      liveLink: "https://snapchat-clone-56064.web.app",
+    },
   ];
 
   const [hoverStates, setHoverStates] = useState(
@@ -69,62 +89,71 @@ function Projects() {
       id="hideScrollBar"
       className="relative overflow-y-scroll"
     >
-        <div className="flex flex-col items-center justify-center ">
-          <div className="text-4xl text-[#0478FF] m-8 font-bold ">
-            Projects
-          </div>
+      <div className="flex flex-col items-center justify-center ">
+        <div className="text-4xl text-[#0478FF] m-8 font-bold ">Projects</div>
 
-          {/* project card template */}
-          <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 gap-y-5">
-            {projectData.map((projects, index) => {
-              return (
-                <div
-                  key={index}
-                  className="relative flex items-center justify-center bg-slate-200/30 shadow-xl rounded-3xl space-x-9 p-3 mx-16 my-4 hover:scale-110 duration-300"
-                  onMouseEnter={() => handleMouseEnter(index)}
-                  onMouseLeave={() => handleMouseLeave(index)}
-                >
-                  {/* PROJECT CARD COVER START */}
+        {/* project card template */}
+        <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 gap-y-5">
+          {projectData.map((projects, index) => {
+            return (
+              <div
+                key={index}
+                className="relative flex items-center justify-center bg-slate-200/30 shadow-xl rounded-3xl space-x-9 p-3 mx-16 my-4 hover:scale-110 duration-300"
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={() => handleMouseLeave(index)}
+              >
+                {/* PROJECT CARD COVER START */}
+                <img
+                  src={projects.imgLandscape}
+                  alt={projects.alt}
+                  className={
+                    hoverStates[index]
+                      ? "absolute top-0 right-0 bottom-0 left-0 m-auto w-1/6 h-0 opacity-0 object-cover rounded-3xl duration-300"
+                      : "absolute top-0 right-0 bottom-0 left-0 m-auto w-full h-full opacity-100 object-cover rounded-3xl duration-300"
+                  }
+                />
+                {/* PROJECT CARD COVER END */}
+
+                <div>
                   <img
-                    src={projects.imgLandscape}
+                    className="rounded-lg m-4"
+                    src={projects.img}
+                    width={250}
                     alt={projects.alt}
-                    className={
-                      hoverStates[index]
-                        ? "absolute top-0 right-0 bottom-0 left-0 m-auto w-1/6 h-0 opacity-0 object-cover rounded-3xl duration-300"
-                        : "absolute top-0 right-0 bottom-0 left-0 m-auto w-full h-full opacity-100 object-cover rounded-3xl duration-300"
-                    }
                   />
-                  {/* PROJECT CARD COVER END */}
-
-                  <div>
-                    <img
-                      className="rounded-lg m-4"
-                      src={projects.img}
-                      width={250}
-                      alt={projects.alt}
-                    />
-                  </div>
-                  <div className="flex flex-col items-start w-full h-full justify-center space-y-8">
-                    <div className="text-2xl font-bold text-[#0478FF]">
-                      {projects.title}
-                    </div>
-                    <div className="">{projects.description}</div>
-                    <a
-                      className="flex items-center bg-[#303030] hover:bg-[#0478FF] duration-200 p-2 rounded-full w-36 "
-                      href={projects.github}
-                      target="_blank"
-                    >
-                      <SiGithub color="white" />
-                      <span className="text-white text-sm px-2">
-                        Github Repo
-                      </span>
-                    </a>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
+                <div className="flex flex-col items-start w-full h-full justify-center space-y-8">
+                  <div className="text-2xl font-bold text-[#0478FF]">
+                    {!projects.liveLink ? (
+                      <span>{projects.title}</span>
+                    ) : (
+                      <span>
+                        <a
+                          href={projects.liveLink}
+                          className="hover:underline"
+                          target="_blank"
+                        >
+                          {projects.title}
+                          <LaunchIcon fontSize="small" />
+                        </a>
+                      </span>
+                    )}
+                  </div>
+                  <div className="">{projects.description}</div>
+                  <a
+                    className="flex items-center bg-[#303030] hover:bg-[#0478FF] duration-200 p-2 rounded-full w-36 "
+                    href={projects.github}
+                    target="_blank"
+                  >
+                    <SiGithub color="white" />
+                    <span className="text-white text-sm px-2">Github Repo</span>
+                  </a>
+                </div>
+              </div>
+            );
+          })}
         </div>
+      </div>
     </div>
   );
 }

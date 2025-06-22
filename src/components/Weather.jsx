@@ -14,7 +14,7 @@ function Weather() {
       ? `${locationInfo.city}, ${locationInfo.state_code}`
       : `${locationInfo.state}, ${locationInfo.state_code}`
     : "";
-  const [allowLocation, setAllowLocation] = useState(true);
+  const [allowLocation, setAllowLocation] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -107,7 +107,9 @@ function Weather() {
             <span className="">
               {/* <img src="https://openweathermap.org/img/wn/04d@2x.png" width={50}/>         */}
               <img
-                src={`https://openweathermap.org/img/wn/${weatherData && weatherData.current.weather[0].icon}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${
+                  weatherData && weatherData.current.weather[0].icon
+                }@2x.png`}
                 width={60}
                 height={50}
                 alt="weather-icon"
@@ -116,7 +118,6 @@ function Weather() {
             {/* 10 <sup>°C</sup> */}
             {Math.round(weatherData && weatherData.current.feels_like)}
             <sup>°C</sup>
-            
           </div>
           <div className="flex items-center justify-end w-36 text-sm">
             {/* Brampton, ON */}
